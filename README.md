@@ -74,13 +74,13 @@ It defines where the "next page" button is located. In case that this element is
  
 ### 3.2 The extraction section
  
-It defines which elements are going to be extracted. It uses a cascade structure so its possible to define the parent and child elements in a recursive way.
+It defines which elements are going to be extracted. It uses a cascade structure so its possible to define the parent and child elements.
  
 The possible instructions for the extraction section are:
 
-- xpath: It defines the element that is going to be extracted using XPath and the XPath expression it will automatically find inside the parent element if exists.
+- xpath: It defines the element that is going to be extracted using a XPath expression. The expression will become automatically relative to the parent element if exists.
 - subelements: It defines the child elements.
-- extract_as: This is always required and sets the name of the element to extract.
+- extract_as: This is always required and it sets the field name of the element to extract.
 - extract_regex: Regular expression used for extract the extracted content.
 - cast_as: Cast the extracted data, so the JSON output will reflect the right data type. Possible casts are "boolean", "int", "float" and "string"
 - in_memory: It used when we want to save temporally in the memory so we can use for example inside of another extraction thread.
