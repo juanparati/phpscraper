@@ -1,0 +1,21 @@
+<blue>
+ _____ _____ _____ _____ _____ _____ _____ _____ _____ _____
+|  _  |  |  |  _  |   __|     | __  |  _  |  _  |   __| __  |
+|   __|     |   __|__   |   --|    -|     |   __|   __|    -|
+|__|  |__|__|__|  |_____|_____|__|__|__|__|__|  |_____|__|__|</blue>
+ <red>#{{VERSION.MAJOR}}.#{{VERSION.MINOR}}</red>
+
+ Usage:
+       #{{__EXECUTABLE__}} recipe [url] [--] [options]
+
+   Arguments:
+       recipe   Scraper recipe
+       url      URL to scrape (Override the recipe URL)
+
+   Options:
+       --file=          Save content to file.
+       --max-req-sec=   Maximum requests per second (Default: auto).
+       --timeout=       Maximum request timeout (Default: 3000 ms).
+       --user-agent=    User agent string.
+       --max-redirects= Maximum allowed number of redirections (Default: 3).
+       --help           Display help.

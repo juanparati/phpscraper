@@ -1,0 +1,15 @@
+project: "Ars technica reviews extractor"
+pagination:
+  next_xpath: "//div[contains(@class, 'next-page')]/a/@href"
+extraction:
+  comments:
+    xpath: "//li[contains(@class, 'comment')]"
+    subelements:
+      author:
+        xpath: "//span[@class='author']/a"
+        extract_as: "author"
+      comment:
+        xpath: "//div[@class='body']"
+        extract_as: "comment"
+        discard:
+          - "//div[@class='quotetitle']"

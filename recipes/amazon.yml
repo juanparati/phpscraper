@@ -1,0 +1,29 @@
+project: "Amazon reviews extractor"
+pagination:
+  next_xpath: "//li[@class='a-last']/a/@href"
+extraction:
+  product:
+    xpath: "//h1/a[@class='a-link-normal']"
+    extract_as: "product"
+    in_memory: true
+  comments:
+    xpath: "//div[@class='a-section celwidget']"
+    subelements:
+      product:
+        from_memory: "product"
+        extract_as: "product"
+      name:
+        xpath: "//span[@class='a-profile-name']"
+        extract_as: "name"
+      rate:
+        xpath: "//i[contains(@class, 'a-icon-star')]/span"
+        extract_as: "rating"
+        extract_regex: "/^.{0,3}/"
+        cast_as: float
+      comment:
+        xpath: "//span[@class='a-size-base review-text review-text-content']"
+        extract_as: "comment"
+      verified:
+        xpath: "//span[@class='a-size-mini a-color-state a-text-bold']"
+        extract_as: "verified"
+        cast_as: boolean

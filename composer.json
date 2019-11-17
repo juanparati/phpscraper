@@ -1,0 +1,34 @@
+{
+  "name": "juanparati/phpscraper",
+  "description": "A PHP scraper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Juan Lago",
+      "email": "juanparati@gmail.comm"
+    }
+  ],
+  "config": {
+    "vendor-dir": "src/Vendor"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "@composer create-project mamuph/system src/System \"2.2\""
+    ],
+    "build": [
+      "caveman build . -r -x"
+    ]
+  },
+  "require": {
+    "ext-json": "*",
+    "amphp/amp": "^2.3",
+    "league/climate": "^3.5",
+    "symfony/dom-crawler": "^4.3",
+    "symfony/yaml": "^4.3",
+    "amphp/artax": "^3.0",
+    "ext-dom": "*"
+  },
+  "bin": [
+    "build/phpscraper"
+  ]
+}
