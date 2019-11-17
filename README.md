@@ -86,7 +86,7 @@ The possible instructions for the extraction section are:
 - in_memory: It used when we want to save temporally in the memory so we can use for example inside of another extraction thread.
 
 
-## 4. Installation
+## 5. Installation
 
 PHPscraper can be installed in different ways:
 
