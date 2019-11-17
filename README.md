@@ -1,8 +1,7 @@
 PHPSCRAPER
 ==========
 
-1. What is it?
---------------
+## 1. What is it?
 
 A command line tool used for extract and format content from webpages. It's suitable for extract like:
 - product catalogs
@@ -13,8 +12,7 @@ A command line tool used for extract and format content from webpages. It's suit
 The output is formatted as [JSON lines](http://jsonlines.org/).
 
 
-2. How it works?
----------------
+## 2. How it works?
 
 1. Create a scraper receipt (see [recipes](recipes))
 2. Type:
@@ -32,8 +30,7 @@ For see additional options just type:
 
 
 
-3. Recipes
-----------
+## 3. Recipes
 
 Recipes are YML files that describe in a structure way how to extract the content from the pages. The recipes uses [XPath](https://www.w3schools.com/xml/xpath_intro.asp) routes in order to instruct which elements are extracted.
 
@@ -87,3 +84,21 @@ The possible instructions for the extraction section are:
 - extract_regex: Regular expression used for extract the extracted content.
 - cast_as: Cast the extracted data, so the JSON output will reflect the right data type. Possible casts are "boolean", "int", "float" and "string"
 - in_memory: It used when we want to save temporally in the memory so we can use for example inside of another extraction thread.
+
+
+## 4. Installation
+
+PHPscraper can be installed in different ways:
+
+A) Download the [last build from Github](https://github.com/juanparati/phpscraper/releases/latest)
+or
+B) Just type "composer global require juanparati/phpscraper"
+
+
+## 5. How to build my own package:
+
+* [Download Caveman](https://github.com/Mamuph/caveman/releases) (The Mamuph Helper Tool)
+* Clone this project
+* Inside the project directory type:
+
+        caveman build . -x -r
